@@ -35,7 +35,7 @@
 	\end{align*}
 		The resulting relation concludes the finite induction, thus $x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})$.
 		
-	\item We know from (iv) that $a^3-b^3=(a-b)(a^2+ab+b^2)$, by letting $a=x and b=-y$ we get $x^3+y^3=(x+y)(x^2-xy+y^2)$.
+	\item We know from (iv) that $a^3-b^3=(a-b)(a^2+ab+b^2)$, by letting $a=x$ and $b=-y$ we get $x^3+y^3=(x+y)(x^2-xy+y^2)$.
  	}
 \end{problem}
 
@@ -94,5 +94,37 @@
 	\item Noting that $x\neq 0$ and $x\neq 1$. Expanding the fractions we get $\frac{1-x}{x(1-x))}+\frac{x}{x(1-x)}=\frac{1}{x(1-x)}>0$. The solutions depends on if the denominator is positive. Thus $x(1-x)>0$ has the same solution set. The solutions are $0 < x < 1$.
 	
 	\item Note $x\neq -1$. Expand by $(x+1)$: $\frac{(x-1)(x+1)}{(x+1)^2}>0$. Since the denominator is always positive we can multiply this on both sides, $x^2-1>0$, Thus $x < -1$ and $x > 1$.
+	}
+\end{problem}
+
+\begin{problem} ~\\
+	\enum{
+	\item Suppose $a<b$ and $c<d$ then we have $b-a>0$ and $d-c >0$ by property 11 $(b-a)+(d-c) > 0$ which is the same as $b+d>a+c$.
+	
+	\item Suppose $a < b$ then $0 < b-a \iff -b < (b-b)-a = -b < -a$.
+	
+	\item Suppose $a < b$ and $c < d$, by (ii): $-c < -d$, then by (i) we have $a-d < b-d$.
+	
+	\item Suppose $a < b$ then $b-a > 0$. Assume $c>0$, Using (P12) we know that $c(b-a) > 0$ and consequently $bc-ac > 0 \iff bc > ac$.
+	
+	\item Suppose $a < b$ then $b-a > 0$. Assume $c<0$, then by (ii) we have $-c>0$. Using P12 we know that $-c(b-a) > 0$ and consequently $ac-bc > 0 \iff ac > bc$.
+	
+	\item Since $a > 1 > 0$ we apply (iv) by letting $c=a$. Thus $a^2>a$
+	
+	\item Because $a$ is positive, it follows by applying (iv) to $a < 1$ that $a^2 <a$
+	
+	\item Using (iv), multiply $a<b$ with $c$ and $c<d$ with $b$. This means that we have $ac<bc$ and $bc<bd$, this is the same as $ac<bc<bd$, thus $ac <bd$.
+	
+	\item Using (viii) we multiply the same inequality twice, $a^2<b^2$
+	
+	\item Suppose $a,b\geq 0$, we prove the contra-positive, therefore $a\geq b$. Multiply by $a$ and $b$ respectively gives two inequalities $a^2 \geq ab$ and $ab \geq b^2$ which is the same as $a^2\geq ab \geq b^2$. This concludes the contra-positive proof because $a^2 \geq b^2$ is the logical opposite of $a^2 < b^2$
+}
+\end{problem}
+
+\begin{problem} ~\\
+	\enuma{
+		\item The base case is $n=2$ which was proven in problem 1.5. Assume $x^n<y^n$ for $0 \leq x < y$. By problem 1.6. (viii) we have $x \cdot x^n < y \cdot y^n \iff x^{n+1}<y^{n+1}$. The induction is complete, thus if $0 \leq x,y$ then $x^n<y^n$ for $n=1,2,\ldots$
+		
+		\item Suppose $x<y$, let the base case be $n=3$ 
 	}
 \end{problem}
