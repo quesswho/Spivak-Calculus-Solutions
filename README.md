@@ -1,1 +1,1 @@
-# Spivak-Calculus-Solutions
+# Spivak Calculus Solutions

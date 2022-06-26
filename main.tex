@@ -1,0 +1,22 @@
+\documentclass[titlepage,12pt]{book}
+
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{problem}[thm]{}
+
+\newcommand{\enum}[1]{\begin{enumerate}[label=(\roman*)] #1 \end{enumerate}}
+
+\title{Spivak's Calculus Solutions}
+\author{Sebastian Miles}
+\date{}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\include{chapters/chapter1}
+\end{document}

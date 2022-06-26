@@ -1,0 +1,51 @@
+\chapter{Basic Properties of Numbers}
+
+\begin{problem} ~\\
+	\enum{
+	\item Suppose that $ax=a$ and $a\neq 0$, then there exists a number $a^{-1}$. Multiplying $a^{-1}$ on both sides yields
+		\begin{align*}
+			(a^{-1}a) \cdot x &=a^{-1}a \\
+			x &=1
+		\end{align*}
+	as desired.
+	
+	\item We use the distributive property on $(x-y)(x+y)$, this can be done by letting $a=x-y$: 
+	\begin{align*}
+		&(x-y)(x+y) = a(x+y)\\
+		&=ax+ay = (x-y)x+(x-y)y\\
+		&=x^2-yx+xy-y^2=x^2-y^2
+	\end{align*}
+
+	\item If we have $x^2=y^2$ then we certainly have $x^2-y^2=0$. By (ii) we know that $0=(x-y)(x+y)$, this implies that $x-y=0$ or $x+y=0$, this is equivalent to saying that $x=y$ or $x=-y$.
+
+	\item Same method as (ii):
+	\begin{align*}
+		&a(x^2+xy+y^2) = ax^2+axy+ay^2\\
+		&= (x-y)x^2+(x-y)xy+(x-y)y^2\\
+		&=x^3-yx^2+x^2y-xy^2+xy^2-y^3\\
+		&=x^3-y^3
+	\end{align*}
+
+	\item We prove this by induction, the base case $n=2$ is already proven in (ii). Suppose $x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})$ is true. Then we equivalently have $x^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})+y^n$. We now prove the n+1 case:
+	\begin{align*}
+		&x^{n+1}-y^{n+1}=x\cdot x^n-y^{n+1} \\
+		&=x(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})+xy^n-y^{n+1} \\
+		&=(x-y)(x^{n}+x^{n-1}y+\cdots +x^2y^{n-2}+xy^{n-1})+(x-y)y^n \\
+		&=(x-y)(x^{n}+x^{n-1}y+\cdots +xy^{n-1}+y^n)
+	\end{align*}
+		The resulting relation concludes the finite induction, thus $x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})$.
+		
+	\item We know from (iv) that $a^3-b^3=(a-b)(a^2+ab+b^2)$, by letting $a=x and b=-y$ we get $x^3+y^3=(x+y)(x^2-xy+y^2)$.
+ 	}
+\end{problem}
+
+\begin{problem} % 2
+	Multiplying by the multiplicative inverse of $x-y$ works only when $x-y\neq 0$, that is $x\neq y$, however, the hypothesis explicitly states $x=y$. So it is not possible to find the multiplicative inverse of $x-y$ and thus the step is invalid.
+\end{problem}
+
+
+\begin{problem} % 3
+	\enum{
+	\item Say we have $\frac{a}{b}$ and $b\neq 0$
+	}
+\end{problem}
