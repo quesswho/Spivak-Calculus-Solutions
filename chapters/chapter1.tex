@@ -240,7 +240,23 @@
 	\enuma{
 	\item Suppose $a \geq 0$ then we have $a=-(-a)$. The case for $a\leq 0$ is then obvious because we have $(-a)\geq 0$ which can be used on the previously proven fact.
 	
-	\item ($\Rightarrow$) Suppose $-b\leq a \leq b$, this implies $a \leq b$ and $-b\leq a \iff -a \leq b$ and consequently $|a| \leq b$. \\($\Leftarrow$) Suppose $|a| \leq b$ then $a \leq b$ and $-a \leq b \iff -b \leq a$, thus $-b \leq a \leq b$. Using this fact and $|a|\geq a$ we can say that ..
+	\item ($\Rightarrow$) Suppose $-b\leq a \leq b$, this implies $a \leq b$ and $-b\leq a \iff -a \leq b$ and consequently $|a| \leq b$. \\($\Leftarrow$) Suppose $|a| \leq b$ then $a \leq b$ and $-a \leq b \iff -b \leq a$, thus $-b \leq a \leq b$. Now we prove the last part. Suppose $|a| \leq |a|$ then by the previously proven theorem we have $-|a| \leq a \leq |a|$.
+	
+	\item As proven earlier, for every $a,b$ we have $-|a| \leq a \leq |a|$ and  $-|b| \leq b \leq |b|$. Add these together gives $-(|a|+|b|) \leq a+b \leq |a|+|b|$, applying the theorem from (b) on $(|a|+|b|)$ and $(a+b)$ we get $|a+b| \leq |a|+|b|$.
 
+	}
+\end{problem}
+
+\begin{problem}
+	We prove first that if $x=y$ and $x,y\neq 0$. The inequality is then $x^2+x^2+x^2>0 \iff x^2 >0$ which is true because $x\neq 0$.
+	
+	Suppose $x\neq y$, then the left side of inequality is equivalent to $(x^2+xy+y^2)=\frac{x^3-y^3}{(x-y)}$. Suppose $x>y$ then $x^3-y^3>0$ by problem 6 (b),  since both the numerator and denominator are positive we know that $\frac{x^3-y^3}{(x-y)}>0$. Next we assume $x < y$ which implies $x^3-y^3 < 0$ by problem 6 (b). This means the numerator and denominator are both negative, thus $\frac{x^3-y^3}{(x-y)}>0$. In every case the inequality is positive, thus we have proven that $x^2+xy+y^2>0$.
+	
+	To prove that the second inequality holds we follow the same steps, suppose $x=y$ which means the inequality is $5x^4>0$. Next suppose $x\neq y$ then we have $x^4+x^3y+x^2y^2+xy^3+y^4=\frac{x^5-y^5}{x-y}$. Suppose $x-y>0$ then $x^5-y^5>0$ which implies $\frac{x^5-y^5}{x-y}>0$. Assume $x-y<0$ then $x^5-y^5<0$ which implies $\frac{x^5-y^5}{x-y}>0$.
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item $(x+y)^2=x^2+2xy+y^2=x^2+y^2 \iff xy=0$ which implies $x=0$ or $y=0$.
 	}
 \end{problem}
