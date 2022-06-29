@@ -12,24 +12,25 @@
 \newtheoremstyle{normal}
 {\topsep}
 {\topsep}
-{\itshape}
+{\normalfont}
 {0pt}
 {\bfseries}{}
 {0pt}
 {{\llap{\smash{\parbox[t]{2.5cm}{\centering \thmname{#1}\thmnumber{ #2}.}}}\thmnote{ (#3)}}}
-%{\makebox[0pt][r]{{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}.}}}
 
 
 \newtheoremstyle{star}
 {\topsep}
 {\topsep}
-{\advance\rightskip3cm\relax\itshape}
+{\normalfont}
 {0pt}
-{\bfseries}{}
+{\normalfont}{}
 {0pt}
-{{\llap{\smash{\parbox[t]{2.5cm}{\centering \thmname{#1}\thmnumber{ #2}.}}}\thmnote{ (#3)}}}
+{{\llap{\smash{\parbox[t]{2.5cm}{\centering \thmname{#1}\thmnumber{*#2}.}}}\thmnote{ (#3)}}}
 
+%\theorembodyfont{\normalfont}
 \theoremstyle{normal}
+%\theoremstyle{definition}
 \newtheorem{thm}{Theorem}[chapter]
 \newtheorem{problem}[thm]{}
 
