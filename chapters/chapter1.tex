@@ -231,18 +231,36 @@
 	}
 \end{problem}
 
-\begin{problem} % 15
+\begin{hproblem} % 15
 	We prove first that if $x=y$ and $x,y\neq 0$. The inequality is then $x^2+x^2+x^2>0 \iff x^2 >0$ which is true because $x\neq 0$.
 	
 	Suppose $x\neq y$, then the left side of inequality is equivalent to $(x^2+xy+y^2)=\frac{x^3-y^3}{(x-y)}$. Suppose $x>y$ then $x^3-y^3>0$ by problem 6 (b),  since both the numerator and denominator are positive we know that $\frac{x^3-y^3}{(x-y)}>0$. Next we assume $x < y$ which implies $x^3-y^3 < 0$ by problem 6 (b). This means the numerator and denominator are both negative, thus $\frac{x^3-y^3}{(x-y)}>0$. In every case the inequality is positive, thus we have proven that $x^2+xy+y^2>0$.
 	
 	To prove that the second inequality holds we follow the same steps, suppose $x=y$ which means the inequality is $5x^4>0$. Next suppose $x\neq y$ then we have $x^4+x^3y+x^2y^2+xy^3+y^4=\frac{x^5-y^5}{x-y}$. Suppose $x-y>0$ then $x^5-y^5>0$ which implies $\frac{x^5-y^5}{x-y}>0$. Assume $x-y<0$ then $x^5-y^5<0$ which implies $\frac{x^5-y^5}{x-y}>0$.
-\end{problem}
+\end{hproblem}
 
 \begin{hproblem} % 16
 	\enuma{
-	\item $(x+y)^2=x^2+2xy+y^2=x^2+y^2 \iff xy=0$ which implies $x=0$ or $y=0$. Next we have $(x+y)^3=x^3+3x^2y+3xy^2+y^3=x^3+y^3 \iff x^2y+xy^2=0$. Suppose $x\neq 0$ then $x^2+xy^2 = 0 \iff y(x+y)=0$ which implies either $y=0$ or $x=-y$. Suppose instead $y \neq 0$ then similarly we have $x(x+y)=0$ which implies $x=0$ or $x=-y$.
+	\item $(x+y)^2=x^2+2xy+y^2=x^2+y^2 \iff xy=0$ which implies $x=0$ or $y=0$. Next we have $(x+y)^3=x^3+3x^2y+3xy^2+y^3=x^3+y^3 \iff x^2y+xy^2=0=xy(x+y)$. Which implies either $x=0$ or $y=0$ or $x=-y$.
 	
-	\item Consider $3(x+y)^2=3x^2+6xy+3y^3 \geq 0$, since $x,y \neq 0$ we have $x^2 > 0$ and $y^2>0$, adding these inequalities makes $4x^2+6xy+4y^2 > 0$.
+	\item Consider $3(x+y)^2=3x^2+6xy+3y^3 \geq 0$, since $x,y \neq 0$ we have $x^2 > 0$ and $y^2>0$, adding these inequalities makes $4x^2+6xy+4y^2 > 0$. If $x,y =0$ then the statement would be false.
+	
+	\item Equivalently we have $4x^3y+6x^2y^2+4y^3x=xy(4x^2+6xy+4y^2)$, left side indicates that it is equal to zero when $x=0$ or $y=0$. Thus $(x+y)^4=x^4+y^4$ when $x=0$ or $y=0$.
+	
+	\item Subtract with $x^5+y^5$ and since $xy \neq 0$ we divide by $5xy$ this makes $x^3+2x^2y+2xy^2+y^3=0 \iff (x+y)^3=x^2y+y^2x=xy(x+y)$. Suppose $x+y \neq 0$ then $xy=(x+y)^2 \iff x^2+xy+y^2=0$, this implies $x,y=0$ by letting $p=x^2+xy+y^2 \iff 2p = 2x^2+2xy+2y^2=x^2+y^2+(x+y)^2$, it then follows all the terms have to be zero because they are either zero or positive, $x=0$ and $y=0$, this contradicts the fact that $xy=0$, thus it must be the case that $x=-y$.
+	
+	Assume this time that $x = 0$ then $(x+y)^5=x^5+y^5 = x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5 \iff y^5 = y^5$. By interchanging $x$ with $y$ in the last sentence it follows that $x=0$ or $y=0$. To conclude, the solutions are $x=-y$ or $x=0$ or $y=0$. My guess is that the same solutions apply to $(x+y)^n=x^n+y^n$ if $n$ is odd and $x=0$ or $y=0$ if $n$ is even.
 	}
 \end{hproblem}
+
+\begin{problem} % 17
+	\enuma{
+	\item $2x^2-3x+4=2(x-\frac{3}{4})^2+y \implies y=\frac{32}{8} - \frac{9}{8}=\frac{23}{8}$
+	
+	\item Subtract $2(y+1)^2$ this makes $x^2-3x$. Let $x^2-3x=(x-\frac{3}{2})+z$ then $z=-\frac{9}{4}$, $z$ is the smallest value.
+	
+	\item Let $m$ be the minimum number for a simple second degree polynomial, then it follows that $x^2+bx+c=0=(x+\frac{b}{2})^2+m = x^2+bx+\frac{b^2}{4}+m \iff m = c-\frac{b^2}{4}$
+	
+	We have $x^2+4xy+5y^2-4x-6y+7=x^2+(4y-4)x+5y^2-6y+7$ The minimum is thus $m=5y^2-6y+7-4(y^2-2y+1)=y^2+2y+3=(y+1)^2+2$. This implies that $2$ is in fact the minimum value.
+}
+\end{problem}
