@@ -2,18 +2,42 @@
 
 \usepackage{amsmath}
 \usepackage{amsthm}
-
+\usepackage{calc}
 
 \usepackage{mathtools}
 \usepackage{enumitem}
 
-\theoremstyle{definition}
+\parindent=3cm
+
+\newtheoremstyle{normal}
+{\topsep}
+{\topsep}
+{\itshape}
+{0pt}
+{\bfseries}{}
+{0pt}
+{{\llap{\smash{\parbox[t]{2.5cm}{\centering \thmname{#1}\thmnumber{ #2}.}}}\thmnote{ (#3)}}}
+%{\makebox[0pt][r]{{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}.}}}
+
+
+\newtheoremstyle{star}
+{\topsep}
+{\topsep}
+{\advance\rightskip3cm\relax\itshape}
+{0pt}
+{\bfseries}{}
+{0pt}
+{{\llap{\smash{\parbox[t]{2.5cm}{\centering \thmname{#1}\thmnumber{ #2}.}}}\thmnote{ (#3)}}}
+
+\theoremstyle{normal}
 \newtheorem{thm}{Theorem}[chapter]
 \newtheorem{problem}[thm]{}
-\newtheorem{*problem}[thm]{*}
 
-\newcommand{\enum}[1]{\begin{enumerate}[label=(\roman*)] #1 \end{enumerate}}
-\newcommand{\enuma}[1]{\begin{enumerate}[label=(\alph*)] #1 \end{enumerate}}
+\theoremstyle{star}
+\newtheorem{hproblem}[thm]{}
+
+\newcommand{\enum}[1]{\begin{enumerate}[labelsep=0.3cm,labelwidth=\widthof{\ref{last-item}}, itemindent=0em,leftmargin=!, label=(\roman*)]#1 \end{enumerate}}
+\newcommand{\enuma}[1]{\begin{enumerate}[labelsep=0.3cm,labelindent=0pt,itemindent=0em,labelwidth=\widthof{\ref{last-item}}, label=(\alph*)]#1 \end{enumerate}}
 
 \title{Spivak's Calculus Solutions}
 \author{Sebastian Miles}

@@ -1,6 +1,6 @@
 \chapter{Basic Properties of Numbers}
 
-\begin{problem} ~\\ % 1
+\begin{problem} % 1
 	\enum{
 	\item Suppose that $ax=a$ and $a\neq 0$, then there exists a number $a^{-1}$. Multiplying $a^{-1}$ on both sides yields
 		\begin{align*}
@@ -44,7 +44,7 @@
 \end{problem}
 
 
-\begin{problem} ~\\ % 3
+\begin{problem} % 3
 	\enum{
 	\item Say we have $\frac{a}{b}$ and $b\neq 0$ then the same fraction can be written as $ab^{-1}$. Suppose we also have a variable $c$ such that $c \neq 0$, then we have $ab^{-1} \cdot (cc^{-1})$ and consequently $(ac)(b^{-1}c^{-1})=\frac{ac}{bc}$. The final equality holds by (iii) which is proven below.
 	
@@ -65,7 +65,7 @@
 	}
 \end{problem}
 
-\begin{problem} ~\\
+\begin{problem} % 4
 	\enum{
 	\item $4-x < 3-2x \iff (4-4)+(-x+2x) < (3-4)+(2x-2x) \iff x < -1$.
 	
@@ -97,7 +97,7 @@
 	}
 \end{problem}
 
-\begin{problem} ~\\
+\begin{problem} % 5
 	\enum{
 	\item Suppose $a<b$ and $c<d$ then we have $b-a>0$ and $d-c >0$ by property 11 $(b-a)+(d-c) > 0$ which is the same as $b+d>a+c$.
 	
@@ -121,7 +121,7 @@
 }
 \end{problem}
 
-\begin{problem} ~\\
+\begin{problem} % 6
 	\enuma{
 		\item The base case is $n=2$ which was proven in problem 1.5. Assume $x^n<y^n$ for $0 \leq x < y$. By problem 1.6. (viii) we have $x \cdot x^n < y \cdot y^n \iff x^{n+1}<y^{n+1}$. The induction is complete, thus if $0 \leq x,y$ then $x^n<y^n$ for $n=1,2,\ldots$.
 		
@@ -143,7 +143,7 @@
 	Suppose $0<a<b$, multiply by $a$ then $a^2<ab \iff a < \sqrt{ab}$. Next consider $(a-b)^2 > 0$ which is equivalent to $a^2+b^2 +2ab > 4ab \iff \frac{a+b}{2} > \sqrt{ab}$, this means that we have $a<\sqrt{ab}<\frac{a+b}{2}$ now remains the final inequality. By the premise we have $b-a>0 \iff b+a>2a \iff \frac{b+a}{2}>a$. We conclude by stating $a<\sqrt{ab}<\frac{a+b}{2}<b$.
 \end{problem}
 
-\begin{*problem} ~\\ % 8
+\begin{hproblem} % 8
 	\begin{itemize}
 		\item [(P10)] Let $b=0$ in P'10, then for every $a$ one of the following properties apply 
 		\enum{
@@ -155,9 +155,9 @@
 		\item [(P11)] Suppose $x$ and $y$ are in $P$ then $0<x$ and $0<y$. By P'12 (Let a=0) we have $x<y+x$. By P'11  we get $0<y+x$ which is in $P$.
 		\item [(P12)] Suppose $x$ and $y$ are in $P$ then $0<x$ and $0<y$. Using P'13 we get $0<xy$, this means that $xy$ is in $P$.
 	\end{itemize}
-\end{*problem}
+\end{hproblem}
 
-\begin{problem}
+\begin{problem} % 9
 	\enum{
 	\item $\sqrt{2}+\sqrt{3}-\sqrt{5}+\sqrt{7}$.
 	\item Triangle inequality states that $|a+b|-|a|-|b|\leq 0$. Therefore $|a|+|b|-|a+b|$.
@@ -167,7 +167,7 @@
 	}
 \end{problem}
 
-\begin{problem} ~\\
+\begin{problem} % 10
 	\enum{
 		\item Suppose $a+b\geq 0$ and $b\geq 0$ then we have $a+b-b=a$. Suppose $a+b\geq 0$ and $b<0$ then $a+b+b=a+2b$. Suppose $a+b<0$ and $b\geq 0$ then $-a-b-b=-(a+2b)$. Suppose $a+b<0$ and $b<0$ then $-a-b+b=-a$.
 		
@@ -179,7 +179,7 @@
 	}
 \end{problem}
 
-\begin{problem}
+\begin{problem} % 11
 	\enum{
 	\item Suppose $x-3>0$ then $x-3=8 \iff x = 11$. Suppose $x-3<0$ then $3-x=8 \iff x=-5$.
 	
@@ -199,7 +199,7 @@
 	}
 \end{problem}
 
-\begin{problem} ~\\ % 12
+\begin{problem} % 12
 	\enum{
 	\item $|xy|^2=(xy)^2=x^2y^2=|x|^2|y|^2\iff |xy|=|x|\cdot|y|$
 	\item Consider $\left| \frac{1}{x} \right|$ for $x\neq 0$. This is the same as $\sqrt{(\frac{1}{x})^2}=\sqrt{\frac{1}{x^2}}=\frac{1}{\sqrt{x^2}}=\frac{1}{|x|}$.
@@ -216,27 +216,11 @@
 	}
 \end{problem}
 
-\begin{problem}
+\begin{problem} % 13
 	We start by proving for $\max$, let $x \geq y$ then $\max(x,y)=\frac{x+y+x-y}{2}=x$ Likewise if $y \geq x$ then $\max(x,y)=y$. Similar reasoning shows that the formula for $\min(x,y)$ is valid. Next we use substitution and get $\max(x,y,z)=\max(x, \max(y,z))=\frac{y+z+2x+|y-z|+|y+z+2x+|y-z||}{4}$ and $\min(x,y,z)=\min(x, \min(y,z))=\frac{y+z+2x+|y-z|-|y+z+2x+|y-z||}{4}$.
-	
-%	We define $\max(x,y)$ and $\min(x,y)$ as
-%	\[
-%		\max(x,y) = \begin{cases}
-%			x \hspace{1cm} &\text{if $x\geq y$} \\
-%			y &\text{if $y>x$}
-%		\end{cases}
-%	\]\[
-%		\min(x,y) = \begin{cases}
-%			x \hspace{1cm} &\text{if $x\leq y$} \\
-%			y &\text{if $y<x$}
-%		\end{cases}
-%	\]
-		
-%		\left\{ max(x,y)=x \hspace{1cm} &\text{if $x>y$}	\right\}
-	
 \end{problem}
 
-\begin{problem} ~\\
+\begin{problem} % 14
 	\enuma{
 	\item Suppose $a \geq 0$ then we have $a=-(-a)$. The case for $a\leq 0$ is then obvious because we have $(-a)\geq 0$ which can be used on the previously proven fact.
 	
@@ -247,7 +231,7 @@
 	}
 \end{problem}
 
-\begin{problem}
+\begin{problem} % 15
 	We prove first that if $x=y$ and $x,y\neq 0$. The inequality is then $x^2+x^2+x^2>0 \iff x^2 >0$ which is true because $x\neq 0$.
 	
 	Suppose $x\neq y$, then the left side of inequality is equivalent to $(x^2+xy+y^2)=\frac{x^3-y^3}{(x-y)}$. Suppose $x>y$ then $x^3-y^3>0$ by problem 6 (b),  since both the numerator and denominator are positive we know that $\frac{x^3-y^3}{(x-y)}>0$. Next we assume $x < y$ which implies $x^3-y^3 < 0$ by problem 6 (b). This means the numerator and denominator are both negative, thus $\frac{x^3-y^3}{(x-y)}>0$. In every case the inequality is positive, thus we have proven that $x^2+xy+y^2>0$.
@@ -255,8 +239,8 @@
 	To prove that the second inequality holds we follow the same steps, suppose $x=y$ which means the inequality is $5x^4>0$. Next suppose $x\neq y$ then we have $x^4+x^3y+x^2y^2+xy^3+y^4=\frac{x^5-y^5}{x-y}$. Suppose $x-y>0$ then $x^5-y^5>0$ which implies $\frac{x^5-y^5}{x-y}>0$. Assume $x-y<0$ then $x^5-y^5<0$ which implies $\frac{x^5-y^5}{x-y}>0$.
 \end{problem}
 
-\begin{problem}
+\begin{hproblem} % 16
 	\enuma{
 	\item $(x+y)^2=x^2+2xy+y^2=x^2+y^2 \iff xy=0$ which implies $x=0$ or $y=0$.
 	}
-\end{problem}
+\end{hproblem}
