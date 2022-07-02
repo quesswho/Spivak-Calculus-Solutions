@@ -9,19 +9,17 @@
 		\end{align*}
 	as desired.
 	
-	\item We use the distributive property on $(x-y)(x+y)$, this can be done by letting $a=x-y$: 
+	\item Applying the distributive property on $(x-y)(x+y)$ makes 
 	\begin{align*}
-		&(x-y)(x+y) = a(x+y)\\
-		&=ax+ay = (x-y)x+(x-y)y\\
+		&(x-y)(x+y) = (x-y)x+(x-y)y\\
 		&=x^2-yx+xy-y^2=x^2-y^2
 	\end{align*}
 
-	\item If we have $x^2=y^2$ then we certainly have $x^2-y^2=0$. By (ii) we know that $0=(x-y)(x+y)$, this implies that $x-y=0$ or $x+y=0$, this is equivalent to saying that $x=y$ or $x=-y$.
+	\item If we have $x^2=y^2$ then we certainly have $0=x^2-y^2$. By (ii) we have $0=(x-y)(x+y)$, this implies that $x-y=0$ or $x+y=0$, this is equivalent to saying that $x=y$ or $x=-y$.
 
 	\item Same method as (ii):
 	\begin{align*}
-		&a(x^2+xy+y^2) = ax^2+axy+ay^2\\
-		&= (x-y)x^2+(x-y)xy+(x-y)y^2\\
+		&(x-y)(x^2+xy+y^2) = (x-y)x^2+(x-y)xy+(x-y)y^2\\
 		&=x^3-yx^2+x^2y-xy^2+xy^2-y^3\\
 		&=x^3-y^3
 	\end{align*}
@@ -264,3 +262,63 @@
 	We have $x^2+4xy+5y^2-4x-6y+7=x^2+(4y-4)x+5y^2-6y+7$ The minimum is thus $m=5y^2-6y+7-4(y^2-2y+1)=y^2+2y+3=(y+1)^2+2$. This implies that $2$ is in fact the minimum value.
 }
 \end{problem}
+
+\begin{problem} % 18
+	\enuma {
+	\item $x=\frac{-b \pm \sqrt{b^2-4c}}{2} \iff (2x+b)^2=b^2-4c \iff 4x^2+4xb+b^2-b^2+4c=0 \iff x^2+bx+c=0$.
+	\item We complete the square, $x^2+bx+c=0 \iff 4(x+\frac{b}{2})^2=b^2-4c$ this follows that $(x+\frac{b}{2})^2 \geq 0$, but $b^2-4c < 0$ which is a contradiction. It also follows that $x^2+bx+c>0$ which means there are no real values of $x$ that satisfy the equation.
+	
+	\item We complete the square $(x+\frac{y}{2})^2+\frac{3y^2}{4}$. Since $\frac{3y^2}{4} > 0$ because $y\neq0$ it must be the case that $(x+\frac{y}{2})^2+\frac{3y^2}{4} >0$ which is the same as $x^2+xy+y^2 > 0$
+	
+	\item Completing the square makes $(x+\frac{\alpha y}{2})^2+y^2(1-\frac{\alpha^2}{4})$. The left term has the property $(x+\frac{\alpha y}{2})^2\geq 0$ (just let $x=-\frac{\alpha y}{2}$). This means the right term must be positive. Let $1-\frac{\alpha^2}{4}>0$ which implies $-2<\alpha<2$.
+	
+	\item $ax^2+bx+c=a(x^2+\frac{bx}{a})+c=a(x+\frac{b}{2a})^2+c-\frac{b^2}{4a^2}$. Since $a>0$ the minimum must be when $x+\frac{b}{a}=0$, so the minimum is $c-\left( \frac{b}{2a} \right)^2$. (The first case is just $a=1$)
+	}
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item Suppose $x_1=\lambda y_1$ and $x_2=\lambda y_2$ then the equality holds if $\lambda ({y_1}^2 + {y_2}^2) = \sqrt{\lambda^2({y_1}^2+{y_2}^2)}\sqrt{({y_1}^2+{y_2}^2)} \iff \lambda = |\lambda|$. Seems to be some kind of error (edition 3) because it does not hold if $\lambda$ is negative. Let's assume $\lambda \geq 0$. The then equality holds. The equality also holds if $y_1=y_2=0$ because both factors on both sides are equal to zero.
+	
+	Assume $y_1$ and $y_2$ is not equal to zero. Then there does not exist a $\lambda$ such that $x_1=\lambda y_1$ and $x_2=\lambda y_2$, the problems states that this implies $\lambda^2({y_1}^2+{y_2}^2)-2\lambda (x_1y_1+x_2y_2)+({x_1}^2+{x_2}^2)>0$. This equation is of the form $\lambda^2+b\lambda+c>0$ and since there does not exist any $\lambda$ we have $b^2<4ac$ by noticing that dividing by $a$ in the equation $ax^2+bx+c=0$ you can apply problem 18 (b), that is $(x_1y_1+x_2y_2)^2<({y_1}^2+{y_2}^2)({x_1}^2+{x_2}^2)$. This follows that $|x_1y_1+x_2y_2| < \sqrt{{y_1}^2+{y_2}^2}\sqrt{{x_1}^2+{x_2}^2}$
+	
+	To conclude we have $$x_1y_1+x_2y_2\leq  |x_1y_1+x_2y_2| \leq \sqrt{{y_1}^2+{y_2}^2}\sqrt{{x_1}^2+{x_2}^2}.$$
+	
+	\item We start with $(x-y)^2\geq 0 \iff 2xy \leq x^2+y^2$. Suppose $x_1,x_2,y_1,y_2 \neq 0$ and let $x=\frac{x_i}{\sqrt{{x_1}^2+{x_2}^2}}$,  $y=\frac{y_i}{\sqrt{{y_1}^2+{y_2}^2}}$ for $i=1,2$. It follows that
+	\begin{gather*}
+		\begin{dcases}
+			\cfrac{2x_1y_1}{\sqrt{{x_1}^2+{x_2}^2}\sqrt{{y_1}^2+{y_2}^2}} \leq \cfrac{{x_1}^2}{{x_1}^2+{x_2}^2}+\cfrac{{y_1}^2}{{y_1}^2+{y_2}^2}
+			\\
+			\cfrac{2x_2y_2}{\sqrt{{x_1}^2+{x_2}^2}\sqrt{{y_1}^2+{y_2}^2}} \leq \cfrac{{x_2}^2}{{x_1}^2+{x_2}^2}+\cfrac{{y_2}^2}{{y_1}^2+{y_2}^2}
+		\end{dcases}
+	\end{gather*}
+	
+	Add both inequalities together, then it follows that $x_1y_1 + x_2y_2\leq \sqrt{{x_1}^2+{x_2}^2}\sqrt{{y_1}^2+{y_2}^2}$.
+	
+	If we assume $x_i=0$ or $y_i = 0$ for $i=1,2$ then either all the terms will be zero or the resulting inequality is for example $0 \leq {y_1}^2$ (let $x_1=0$).
+
+	\item $({x_1}^2+{x_2}^2)({y_1}^2+{y_2}^2)$
+	\begin{align*}
+		&={(x_1y_1)}^2+2(x_1y_1)(x_2y_2)+{(x_2y_2)}^2+{(x_2y_1)}^2-2(x_2y_1)(x_1y_2)+{(x_1y_2)}^2 \\
+		&=(x_1y_1+x_2y_2)^2+(x_2y_1-x_1y_2)^2 \geq (x_1y_1+x_2y_2)^2 \\
+		&\iff \sqrt{{x_1}^2+{x_2}^2}\sqrt{{y_1}^2+{y_2}^2} \geq |x_1y_1+x_2y_2| \geq x_1y_1+x_2y_2
+	\end{align*}
+
+	\item The problem is constructed to waste time, see (a) where we already proved it. It shows that if $y_1=0$ and $y_2=0$ or there exists a number $\lambda$ such that $x_1=\lambda y_1$ and $x_2=\lambda y_2$ then the equality holds, otherwise $|x_1y_1+x_2y_2| < \sqrt{{y_1}^2+{y_2}^2}\sqrt{{x_1}^2+{x_2}^2}$.
+	}
+
+	
+\end{problem}
+
+\begin{problem}
+	Add both inequalities, $|x-x_0|+|y-y_0| < \varepsilon$. We apply the triangle inequality which makes $|(x+y)-(x_0+y_0)|\leq |x-x_0|+|y-y_0|<\varepsilon$. For the second inequality, notice that that  $|y-y_0|=|y_0-y|$. So the triangle inequality makes $|(x-y)-(x_0-y_0)|\leq |x-x_0|+|y_0-y| < \varepsilon$.
+\end{problem}
+
+\begin{hproblem}
+	Suppose $|x-x_0|< \frac{\varepsilon}{2(|y_0|+1)}$ and $|x-x_0| < 1$, then $2|x-x_0|(|y_0|+1) < \varepsilon$. Now assume $|y-y_0|< \frac{\varepsilon}{2(|y_0|+1)}$ then $2|y-y_0|(|x_0|+1) < \varepsilon$. Sum the two similar inequalities \\
+	\begin{align*}
+		2|x-x_0|(|y_0|+1)+2|y-y_0|(|x_0|+1) < 2\varepsilon \\
+		|x-x_0|(|y_0|+1)+|y-y_0|(|x_0|+1) < \varepsilon \\
+		|xy_0-x_0y_0|+|x-x_0|+|yx_0-y_0x_0|+|y-y_0| < \varepsilon
+	\end{align*}
+\end{hproblem}
