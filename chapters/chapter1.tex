@@ -315,10 +315,76 @@
 \end{problem}
 
 \begin{hproblem}
-	Suppose $|x-x_0|< \frac{\varepsilon}{2(|y_0|+1)}$ and $|x-x_0| < 1$, then $2|x-x_0|(|y_0|+1) < \varepsilon$. Now assume $|y-y_0|< \frac{\varepsilon}{2(|y_0|+1)}$ then $2|y-y_0|(|x_0|+1) < \varepsilon$. Sum the two similar inequalities \\
+	Suppose $|x-x_0|< \frac{\varepsilon}{2(|y_0|+1)}$, then $2|x-x_0|(|y_0|+1) < \varepsilon$. Now assume $|y-y_0|< \frac{\varepsilon}{2(|y_0|+1)}$ then $2|y-y_0|(|x_0|+1) < \varepsilon$. Sum the two similar inequalities \\
 	\begin{align*}
-		2|x-x_0|(|y_0|+1)+2|y-y_0|(|x_0|+1) < 2\varepsilon \\
-		|x-x_0|(|y_0|+1)+|y-y_0|(|x_0|+1) < \varepsilon \\
-		|xy_0-x_0y_0|+|x-x_0|+|yx_0-y_0x_0|+|y-y_0| < \varepsilon
+		&2|x-x_0|(|y_0|+1)+2|y-y_0|(|x_0|+1) < 2\varepsilon \\
+		&|x-x_0|(|y_0|+1)+|y-y_0|(|x_0|+1) < \varepsilon \\
+	&|y_0||x-x_0|+|x-x_0|+|x_0||y-y_0|+|y-y_0| < \varepsilon
 	\end{align*}
+	Now suppose $|x-x_0| < 1$ then we have $|y-y_0||x-x_0| < |y-y_0|$.
+	Continuing on the expression above we get
+	\begin{align*}
+		&>|y_0||x-x_0|+|x_0||y-y_0|+|y-y_0| \\
+	&>(|y_0|+|y-y_0|)(|x-x_0|)+|x_0||y-y_0| \\
+	&\geq |y||x-x_0|+|x_0||y-y_0| \geq |xy-x_0y+x_0y-x_0y_0| = |xy-x_0y_0|
+	\end{align*}
+	Therefore we have $|xy-x_0y_0| < \varepsilon$. 
 \end{hproblem}
+
+\begin{hproblem}
+	We first prove that $y\neq 0$. Suppose $|y-y_0|<\frac{|y_0|}{2}$ then by problem 12, we get $|y_0| < 2|y|$ by problem 12. By supposing $y=0$ we get a contradiction because $0<|y_0|$ thus it must be the case that $y\neq 0$. \\\\
+	Now we prove the latter. Suppose $|y-y_0| < \frac{\varepsilon|y_0|^2}{2}$. Then 
+	\begin{align*}
+		|y-y_0| &< \varepsilon|y_0||y| \\
+		\left| \frac{y_0-y}{y_0y} \right| &< \varepsilon \\
+		\left| \frac{1}{y_0}-\frac{1}{y} \right| &< \varepsilon
+	\end{align*}
+	as desired.
+\end{hproblem}
+
+\begin{hproblem}
+	We begin first by using problem 21. We can then state that if $y\neq0$, $y_0\neq0$, $\left| \frac{1}{y}-\frac{1}{y_0}\right| < \frac{\varepsilon}{2(|x_0|+1)}$ and $|x-x_0|<\min \left( \frac{\varepsilon}{2(\left| \frac{1}{y_0}\right| +1)},1 \right)$ then we have $\left| \frac{x}{y}-\frac{x_0}{y_0}\right| < \varepsilon$. Now we need to modify the hypothesis. We have that $y_0\neq 0$ and $|y-y_0| < \min \left( \frac{|y_0|}{2},\frac{\varepsilon|y_0|^2}{2} \right)$ implies $y\neq 0$ and the hypothesis earlier.\\\\
+	To conclude, $y_0=0$, $|y-y_0| < \min \left( \frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{2} \right)$ and $|x-x_0|<\min \left( \frac{\varepsilon}{2(\left| \frac{1}{y_0}\right| +1)},1 \right)$ implies $y\neq0$ and $\left| \frac{x}{y}-\frac{x_0}{y_0}\right| < \varepsilon$.
+\end{hproblem}
+
+\begin{hproblem}
+	\enuma{
+	\item We prove the base case (k=2) with the associative law, $(a_1+a_2)+a_3=a_1+(a_2+a_3)$. Next we suppose $P(k)$: $(a_1+\cdots+a_k)+a_{k+1}=a_1+\cdots+a_{k+1}$, then we prove for $P(k+1):$ \\\\
+	$\begin{aligned}
+		(a_1+\cdots+a_{k+1})+a_{k+2} &=[(a_1+\cdots+a_k) + a_{k+1}]+a_{k+2} \\
+		(a_1+\cdots+a_k)+(a_{k+1}+a_{k+2})&=a_1+\cdots+k_{k+2}
+	\end{aligned}$\\\\
+	This concludes the induction.
+	
+	\item We will prove this by induction on $n$, suppose $n \geq k$ and $(a_1+\cdots+a_k)+(a_{k+1}+\cdots+a_n)=a_1+\cdots+a_n$. The base case is $n=k+1$ which was proven in the previous problem. We will now show the equality holds for $n+1$, we have \\
+	$\begin{aligned}
+		(a_1+\cdots+a_k)+(a_{k+1}+\cdots+a_{n+1}) \\
+		&{}= (a_1+\cdots+a_k)+((a_{k+1}+\cdots+a_n)+a_{n+1}) \\\
+		&{}= ((a_1+\cdots+a_k)+(a_{k+1}+\cdots+a_n))+a_{n+1} \\
+		&{}= (a_1+\cdots+a_n)+a_{n+1} \\
+		&{}= a_1+\cdots+a_{n+1}
+	\end{aligned}$\\\\
+	We have now proven that for $n \geq k$ it follows that $$(a_1+\cdots+a_k)+(a_{k+1}+\cdots+a_n)=a_1+\cdots+a_n.$$
+	
+	\item We will show that $s(a_1,\dots,a_k)=s(a_1)+\cdots+s(a_k)$ by induction on k. Let the base case be $k=1$, then we obviously have an equality. Now we assume $s(a_1,\dots,a_k)=s(a_1)+\cdots+s(a_k)$ and now prove for the $k+1$ case. \\ $\begin{aligned}
+		s(a_1,\dots,a_{k+1})&{}=s(a_1,\dots,a_k)+s(a_{k+1}) \\
+		&{}=s(a_1)+\cdots+s(a_{k+1})
+	\end{aligned}$ \\\\
+	Because $s(a_1)+\cdots+s(a_k)=a_1+\cdots+a_k$, our proof is done.
+	}
+\end{hproblem}
+
+\begin{problem}
+	We suppose the rules of addition and multiplication given in the problem we then prove it is a field.
+	\enum{
+	\item Testing each case is tedious and will not be contained here, but we find that $a+(b+c)=(a+b)+c$ works.
+	\item Suppose $a=0$ then $0+0=0+0=0$, and $a=1$ implies $1+0=0+1=0$
+	\item If $a=0$ then then let $-a=0$ and if $a=1$ then $-a=1$.
+	\item This works by exhaustion.
+	\item If at least one variable is zero, then $0=0$, otherwise $1\cdot(1\cdot)=(1\cdot 1)\cdot 1 \iff 1=1$
+	\item Suppose $a=0$ then $1\cdot 0=1\cdot 0=0$, suppose $a=1$ then $1\cdot1=1\cdot1=1$
+	\item $a=0$ is not allowed so we only prove for the $a=1$ case which makes $a^{-1}=1$.
+	\item If at least one variable is equal to zero then we have $0=0$, otherwise $1\cdot1=1\cdot1$
+	\item Suppose $a=0$ then $0\cdot(b+c)=0\cdot b+0\cdot c=0$. Suppose $a=1$ then $1\cdot(b+c)=1\cdot b + 1\cdot c= b+c$
+	}
+\end{problem}
