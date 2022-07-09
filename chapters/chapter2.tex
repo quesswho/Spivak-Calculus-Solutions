@@ -34,3 +34,60 @@
 	}
 \end{problem}
 
+\begin{problem}
+	\enuma{
+	\item The easiest way seems to be starting at the right side.
+		\begin{align*}
+			\binom{n}{k-1}+\binom{n}{k}=\frac{n!}{(k-1)!(n-k+1)!}+\frac{n!}{k!(n-k)!} \\
+			\frac{kn!}{k!(n-k+1)!}+\frac{(n-k+1)n!}{k!(n-k+1)!} = 	\frac{(n+1)!}{k!(n+1-k)!}=\binom{n+1}{k}
+		\end{align*}
+	\item We perform induction on $n$. Let the base case be $n=1$ then by the definition of the binomial coefficients we have two cases, $\binom{1}{0}$ and $\binom{1}{1}$, both of these are equal to one by definition. \\\textbf{TODO:} Is this base case actually valid? $n=1$ does not use every part of the definition. If the definition can be different for numbers other than the base case does it invalidate the proof? Could there be multiple base cases involved testing each definition?
+	\\\\
+	Suppose $\binom{n}{k}$ is a natural number for every $0\leq k\leq n$, then it follows that $\binom{n+1}{k}=\binom{n}{k-1}+\binom{n}{k}$ is a natural number because $\binom{n}{k-1}$ and $\binom{n}{k}$ are both natural numbers.
+	
+	\item Suppose we can chose any number only once from $1,2,\dots,n$. First we have $n$ different choices, then $n-1$ choices and so on. If we do this $n$ times we eventually only have one number left to choose. The numbers have $n!$ different sequences from which we can choose. Now we want to count the number of integers we can choose with only $k$ choices. If $k=1$ then there is only one choice, $n$. If $k=2$ then we have $n\cdot (n-1)$, if we continue this we notice that this is the same as cutting the smaller factors in $n!$. Thus the number of ways we can do this is $\frac{n!}{(n-k)!}$. This is also known as the numbers of permutations of $n$ of length $k$. Notice that the order in which these numbers are chosen are important. However, in a set the order does in fact not matter. The number of permutations of length $k$ is $k!$, so finally we divide the permutations formula by $k$ which means that we have $\frac{n!}{k!(n-k)!}$ and by the definition of the binomial coefficients this is the same as $\binom{n}{k}$.
+	Because $\binom{n}{k}$ is the number of sets with exactly $k$ integers chosen by $n$ we have that $\binom{n+1}{k}$ is the number of sets with exactly $k$ integers chosen by $n+1$. This implies that the case for $n+1$ is also a finite amount.
+	
+	\item Base case: $n=1$ then $(a+b)^1=\sum_{k=0}^{1}\binom{n}{k}a^{n-k}b^k =a+b$. Before we continue, a new notation must be introduced, $\sum_{0\leq k \leq n}a_k$, this means the sum over k from $1$ to $n$. Suppose $$\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k=(a+b)^n.$$
+	then 
+	\begin{gather*}
+		\sum_{0\leq k \leq n+1}\binom{n+1}{k}a^{n+1-k}b^k = a^{n+1}+b^{n+1}+\sum_{1\leq k\leq n}\binom{n+1}{k}a^{n-k+1}b^k \\
+		a^{n+1}+\sum_{1\leq k\leq n}\binom{n}{k}a^{n-k+1}b^k+\sum_{1\leq k\leq n+1}\binom{n}{k-1}a^{n-k+1}b^k \\
+		\sum_{0\leq k\leq n}\binom{n}{k}a^{n-k+1}b^k+\sum_{0\leq k-1\leq n}\binom{n}{k-1}a^{n-(k-1)}b^{(k-1)+1} \\
+		\intertext{(Substitute $k-1$ for $k$)}
+		a\sum_{0\leq k\leq n}\binom{n}{k}a^{n-k}b^k+b\sum_{0\leq k \leq n}\binom{n}{k}a^{n-k}b^k \\
+		(a+b)\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k=(a+b)^{n+1}
+	\end{gather*}
+	To conclude, we have proven the equality $$(a+b)^n=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^n$$
+	
+	\item Using similar steps as above we can derive the transformation $$\sum_{k=0}^{n+1}a_k\binom{n+1}{k}=\sum_{k=0}^{n}a_k\binom{n}{k}+\sum_{k=0}^{n}a_{k+1}\binom{n}{k}$$
+	
+		\enum{
+		\item For the sake of base case, let $n=0$, then we have $\binom{0}{0}=1$. Suppose $\sum_{j=0}^{n}\binom{n}{j}=2^n$
+		then
+		\begin{gather*}
+			\sum_{0\leq j \leq n+1}\binom{n+1}{j}=\sum_{0\leq j \leq n}\binom{n}{j}+\sum_{0\leq j \leq n}\binom{n}{j} \\
+			2\sum_{0\leq j \leq n}\binom{n}{j} =2^{n+1}
+		\end{gather*}
+		\item The base case $n=0$ does not seem to work, therefore we try $n=1$ then we have $\binom{n}{1}-\binom{1}{1}=1-1=0$. Suppose $\sum_{j=0}^{n}(-1)^j\binom{n}{j}=0$. Then by replacing $n$ with $n+1$ we do the same transformation as earlier
+		\begin{gather*}
+			\sum_{j=0}^{n+1}(-1)^j\binom{n+1}{k}=\sum_{j=0}^{n}(-1)^j\binom{n}{k}+\sum_{j=0}^{n}(-1)^{j+1}\binom{n}{k} \\
+			\sum_{j=0}^{n}(-1)^j\binom{n}{k}-\sum_{j=0}^{n}(-1)^j\binom{n}{k} = 0.
+		\end{gather*}
+		
+		\item Subtract (i) with (ii), then $$\binom{n}{0}-\binom{n}{0}+\binom{n}{1}+\binom{n}{1}+\cdots=2^n-0$$
+		The end of the sum depends whether $n$ is odd or even so we don't explicitly write it down. Notice that the all the even binomials cancel out, thus we have 
+		$$2\sum_{l \text{ odd}}\binom{n}{l}=2^n \iff \sum_{l \text{ odd}}\binom{n}{l}=2^{n-1}$$
+		
+		\item Subtracting (i) with (iii), it follows that we only have the even binomials left, the other part of the formula is then $2^n-2^{n-1}=2^{n-1}$. It follows that $$\sum_{l \text{ even}}\binom{n}{l}=2^{n-1}.$$
+		}
+	}
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item Let the base case be $l=0$, this is clearly true. Assume for the sake of induction that $$\sum_{k=0}^{l}\binom{n}{k}\binom{m}{l-k}=\binom{n+m}{l}$$
+	
+	}
+\end{problem}
+
