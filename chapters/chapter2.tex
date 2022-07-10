@@ -41,7 +41,7 @@
 			\binom{n}{k-1}+\binom{n}{k}=\frac{n!}{(k-1)!(n-k+1)!}+\frac{n!}{k!(n-k)!} \\
 			\frac{kn!}{k!(n-k+1)!}+\frac{(n-k+1)n!}{k!(n-k+1)!} = 	\frac{(n+1)!}{k!(n+1-k)!}=\binom{n+1}{k}
 		\end{align*}
-	\item We perform induction on $n$. Let the base case be $n=1$ then by the definition of the binomial coefficients we have two cases, $\binom{1}{0}$ and $\binom{1}{1}$, both of these are equal to one by definition. \\\textbf{TODO:} Is this base case actually valid? $n=1$ does not use every part of the definition. If the definition can be different for numbers other than the base case does it invalidate the proof? Could there be multiple base cases involved testing each definition?
+	\item We perform induction on $n$. Let the base case be $n=1$ then by the definition of the binomial coefficients we have two cases, $\binom{1}{0}$ and $\binom{1}{1}$, both of these are equal to one by definition. \\\textbf{TODO:} Is this base case actually valid? $n=1$ does not use every part of the definition. If the definition can be different for numbers other than the base case does it invalidate the proof? Must there be multiple base cases involved testing each part of the definition?
 	\\\\
 	Suppose $\binom{n}{k}$ is a natural number for every $0\leq k\leq n$, then it follows that $\binom{n+1}{k}=\binom{n}{k-1}+\binom{n}{k}$ is a natural number because $\binom{n}{k-1}$ and $\binom{n}{k}$ are both natural numbers.
 	
@@ -76,7 +76,7 @@
 		\end{gather*}
 		
 		\item Subtract (i) with (ii), then $$\binom{n}{0}-\binom{n}{0}+\binom{n}{1}+\binom{n}{1}+\cdots=2^n-0$$
-		The end of the sum depends whether $n$ is odd or even so we don't explicitly write it down. Notice that the all the even binomials cancel out, thus we have 
+		The end of the sum depends on whether $n$ is odd or even so we don't explicitly write it down. Notice that the all the even binomials cancel out, thus we have 
 		$$2\sum_{l \text{ odd}}\binom{n}{l}=2^n \iff \sum_{l \text{ odd}}\binom{n}{l}=2^{n-1}$$
 		
 		\item Subtracting (i) with (iii), it follows that we only have the even binomials left, the other part of the formula is then $2^n-2^{n-1}=2^{n-1}$. It follows that $$\sum_{l \text{ even}}\binom{n}{l}=2^{n-1}.$$
@@ -85,9 +85,49 @@
 \end{problem}
 
 \begin{problem}
-	\enuma{
-	\item Let the base case be $l=0$, this is clearly true. Assume for the sake of induction that $$\sum_{k=0}^{l}\binom{n}{k}\binom{m}{l-k}=\binom{n+m}{l}$$
+	\enum{
+	\item We first need to prove an important property of sums, 
+	\begin{align*}
+&\left(\sum_{i=0}^{n}a_i\right)\left(\sum_{j=0}^{m}b_j\right)=(a_1+\cdots+a_n)(b_1+\cdots+b_m)\\
+		&=a_1(b_1+\cdots+b_m)+\cdots+ a_n(b_1+\cdots+b_m) \tag*{(Distributive property)}\\
+		&=\sum_{i=0}^{n}\left(a_i\sum_{j=0}^{m} b_j\right)=\sum_{i=0}^{n}\sum_{j=0}^{m}a_ib_j \tag*{($a_i$ is a constant in the $b_j$ sum)}
+	\end{align*}
+	Note that we can interchange the summation symbols if we were to apply the distributive property as $b_1(a_1+\cdots+a_n)+\cdots b_m(a_1+\cdots+a_n)$ and then continue with similar steps, thus we have $$\sum_{i=0}^{n}\sum_{j=0}^{m}a_ib_j=\sum_{j=0}^{m}\sum_{i=0}^{n}a_ib_j.$$
+	Now consider the polynomial $(1+x)^n(1+x)^m$, we can write this as
+	\begin{gather*}                      
+		\sum_{l=0}^{n+m}\binom{n+m}{l}x^l \tag{1}\\
+		\intertext{and}                     
+		\left(\sum_{i=0}^{n}\binom{n}{i}x^i\right)\left(\sum_{j=0}^{m}\binom{m}{j}x^j\right) = \sum_{i=0}^{n}\sum_{j=0}^{m}\binom{n}{i}\binom{m}{j}x^{i+j} \tag{2}
+	\end{gather*}
+	The important thing is to realize that both sums represent the same polynomial. We must now use the fact that if a polynomial is equal for any $x$ then they must have the same coefficients. This theorem can be proven as a corollary to the problem $3.7.$ (c). 
 	
+	The coefficients for $x^l$ is $\binom{n+m}{l}$ as stated above (1). By the theorem recently stated we know that the coefficients in the other sum must be the same. Therefore, it makes sense to gather all the coefficients to each indeterminate. To do this we will use the equality 
+\begin{gather*}
+	\sum_{i=0}^{n}\sum_{j=0}^{m}a_{i+j}=\sum_{l=0}^{n+m}\sum_{i=0}^{n}a_l \tag*{where $l=i+k$}
+\end{gather*}
+	\\
+	Proof. Let $l=i+j$, then
+	\begin{gather*}
+		\sum_{i=0}^{n}\sum_{j=0}^{m}a_{i+j}=\sum_{0 \leq i \leq n}\sum_{0 \leq l-i \leq m}a_l \tag*{(Substitute $j=l-i$)} \\
+		\sum_{0 \leq i \leq n}\sum_{0 \leq l \leq m+n}a_l=\sum_{l=0}^{m+n}\sum_{i=0}^{n}a_l \tag*{(Add $0\leq i \leq n$ to the left bound)}.
+	\end{gather*}
+	Applying the transformation to (2) we get the following equalities
+	\begin{gather*}
+		\sum_{l=0}^{n+m}\sum_{i=0}^{n}\binom{n}{i}\binom{m}{l-i}x^l=\sum_{l=0}^{n+m}\binom{n+m}{l}x^l \\
+		\sum_{i=0}^{n}\binom{n}{i}\binom{m}{l-i}=\binom{n+m}{l}
+	\end{gather*}
+	The last equality holds by the theorem stated earlier that the if two polynomials are equal then they have the same coefficients.
+	\item By letting $n=l=m$ in the equality before we get 
+	\begin{gather*}
+		\sum_{k=0}^{n}\binom{n}{k}\binom{n}{n-k}=\binom{2n}{n} \\
+		\sum_{k=0}^{n}\binom{n}{k}^2=\binom{2n}{n}
+	\end{gather*}
+	The last equality holds because
+	$$\binom{n}{n-k}=\frac{n!}{(n-k)!(n-(n-k))!}=\frac{n!}{(n-k)!k!}=\binom{n}{k}$$
 	}
+\end{problem}
+
+\begin{problem}
+	We will not prove this inductively because it is trivial. Suppose $S=1+r+\cdots+r^n$ then $$rS+1=1+r+r^2+\cdots r^{n+1}=S+r^{n+1} \iff 1-r^{n+1}=S(1-r) \iff S=\frac{1-r^{n+1}}{1-r}$$
 \end{problem}
 
