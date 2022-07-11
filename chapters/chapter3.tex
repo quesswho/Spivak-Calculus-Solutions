@@ -1,0 +1,55 @@
+\chapter{Functions}
+
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+	\enuma{
+	\item We wish to create a polynomial such that has all the roots at every $x_j$, and that when $x=x_i$ the polynomial is equal to one. The hint provides us with a polynomial that abides the roots. We try modifying this polynomial by applying an unknown product $$f_i(x)=P \cdot \prod_{\substack{j=1 \\ j \neq i}}^{n}(x-x_j)$$
+	Since we know that $f_i(x_i)=1$ we get the following equation
+	$$P \cdot \prod_{\substack{j=1 \\ j \neq i}}^{n}(x_i-x_j)=1 \iff P=\prod_{\substack{j=1 \\ j \neq i}}^{n}\frac{1}{x_i-x_j}$$ Notice that this is okay since $x_i$ and $x_j$ are distinct by the hypothesis.
+	Substitute the P and we find a solution by combining the products
+	$$f_i(x)=\prod_{\substack{j=1 \\ j \neq i}}^{n}\frac{x-x_j}{x_i-x_j}$$
+	
+	\item Since each $f_i$ is equal to zero at ever $x_j$ except for $x_i$ which makes a one we have that $a_if_i$ gives a polynomial that intersects the point $(x_i, a_i)$. The final function $f$ can be derived by simply summing all the $f_j$, that is $$f(x)=\sum_{j=1}^{n}a_jf_j=a_j\sum_{j=1}^{n}\prod_{\substack{j=1 \\ j \neq i}}^{n}\frac{x-x_j}{x_i-x_j}$$
+	}
+\end{problem}
+\begin{problem}
+	\enuma{
+	\item Base case $n=0$ then we have $f(x)=p_0$ and then just let $g(x)=0$ and $b=p_0$. Base case $n=1$ then $f(x)=p_1x+p_0$, let $g(x)=p_1$ thus $p_1x+p_0=p_1x-ap_1+b\iff p_0+ap_1$. \\
+	Now for induction, assume for $f_n(x)=p_nx^n+\cdots+p_1x+p_0$ and any $a$ that there exists a function $g(x)$ and a number $b$ such that $$p_nx^n+\cdots+p_0=(x-a)g(x)+b.$$ Now consider the polynomial 
+	\begin{gather*}
+		f_{n+1}(x)=p_{n+1}x^{n+1}+\cdots+p_0 \tag{1}
+	\end{gather*}
+	then by doing one step of long division we get 
+	\begin{gather*}
+		p_{n+1}x^{n+1}+\cdots+p_0=(x-a)(p_{n+1}x^n)+p_nx^n+\cdots+p_1x+p_0+p_{n+1}a \\
+		(x-a)(p_{n+1}x^n)+(x-a)g(x)+b=(x-a)(p_{n+1}x^n+g(x))+b \tag*{(Apply (1))}
+	\end{gather*}
+	This concludes the induction because $p_{n+1}+g(x)$ is a polynomial which implies $f_{n+1}$ must be true.
+	
+	\item Spivak has likely forgotten to mention that $f$ is a polynomial, we will just assume it is. By the last problem we have that for any $a$ there is a polynomial $g(x)$ and $b$ such that $f(x)=(x-a)g(x)+b$, since we have $f(a)=0$ we certainly have $$f(a)=(a-a)g(x)+b=b=0.$$ Thus, this means $f(x)=(x-a)g(x)$
+	
+	\item The base case is a polynomial of degree $1$, that is $a_0+a_1x$. The only root is $x=-\frac{a_0}{a_1}$. Suppose for induction that $a_0+a_1x+\cdots+a_nx^n$ has at most $n$ distinct roots, then let $x_1$ be a root to the polynomial $$a_0+\cdots+a_{n+1}x^{n+1}=(x-x_1)g(x)$$
+	The equality holds by the theorem in (b) which also states that $g(x)$ is polynomial, the important thing to notice is that $g(x)$ is of degree $n$. By the induction assumption we have that $g(x)$ has at most $n$ roots, then $f(x)$ has at most one more additional root at $x_1$ if this is distinct from the other roots.
+	
+	\item Suppose $f_{n}(x)$ is polynomial function with $n$ roots then let $r$ be a number such that it is not a root of $f_n(x)$, then consider $f_{n+1}=(x-r)f_{n}(x)$ which means there is a polynomial with one degree greater than $f_n(x)$.\\\\
+	Now we find the even degree function, since the degree is even there exists a least value or maximum value for every even degree polynomial (This can easily be proven with limits by factoring out $a_nx^n$ in a polynomial of the form $a_nx^n+\cdots a_0$ and considering $\lim_{x\rightarrow \pm \infty}f_n(x)$). Since both variations exists, we choose the a polynomial $f_n$ such that it has $n$ roots and a minimum $l$. Now we create a function $h(x)=f_n(x)-l+1$ This ensures that the minimum value is exactly one unit above zero. \\\\
+	
+	Next suppose n is odd then we have the function $$\sum_{i=1}^{n}x^i$$ the function has only one real root at $x=0$ because if we suppose $x\neq0$ and try to find any other solutions we get $x^{n-1}+\cdots+x+1=0$ which is a polynomial without any real roots (proof of this is left as an exercise to the reader).
+	}
+\end{problem}
+
+\begin{problem}
+	Note that $c=0$ because otherwise it would imply there is a root to $cx+d$ which means we divide by zero, we also have $d\neq 0$. Now we get the equation $$f(f(x))=\frac{a\frac{ax+b}{d}+b}{d}=a^2x+ab+bd=x$$
+	This implies that $a^2=1$ thus $a=\pm 1$, we have two cases:\\
+	\textbf{Case 1:}$x-b+bd=x\iff b=bd$, if $b=0$ then any $d\neq 0$ works otherwise if $b\neq 0$ then $d=1$.\\
+	\textbf{Case 2:} $x+b+db=x\iff-b=bd$, if $b=0$ then any $d\neq 0$ works otherwise if $b\neq0$ then $d=-1$.
+\end{problem}
