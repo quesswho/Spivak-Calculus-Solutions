@@ -1,0 +1,25 @@
+\chapter{Limits}
+
+\begin{problem}
+	\enum{
+	\item Let $f(x)=x^2-1$ and $g(x)=\frac{1}{x+1}$, we get $\lim_{x\to 1}f(x)=0$ and $\lim_{x\to1}g(x)=\frac{1}{2}$. Then we get $$\lim_{x\to 1}(f\cdot g)(x)=0.$$
+	
+	\item Expanding $x^3-2^3$ and noting that $x\neq 2$
+	\begin{gather*}
+		\lim_{x\to 2}\frac{(x-2)(x^2+2x+4)}{x-2}=\lim_{x\to 2}x^2+2x+4=12.
+	\end{gather*}
+
+	\item Expanding using 
+	$$x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1})$$
+	we get
+	$$\lim_{x\to y}(x^{n-1}+x^{n-2}y+\cdots +xy^{n-2}+y^{n-1}) = y^n.$$
+	
+	\item Same thing here except we get $x^n$.
+	
+	\item Expand the fraction by the conjugate of the numerator
+	\begin{align*}
+		\lim_{h\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}&=\lim_{h\to 0}\frac{h}{h(\sqrt{a+h}+\sqrt{a})} \\
+		\lim_{h\to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}&=\frac{1}{2\sqrt{a}}
+	\end{align*}
+	}
+\end{problem}
