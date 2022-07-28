@@ -1,0 +1,63 @@
+\chapter{Continuous Functions}
+
+\begin{problem}
+	\enum{
+	\item The function has a discontinuity at $x=2$, the limit as $x \to 2$ is $4$ so we define
+	\[
+	F(x)=
+	\begin{cases}
+		\frac{x^2-4}{x-2}, & \text{for } x\neq 2\\
+		4, & \text{otherwise.}
+	\end{cases}
+	\]
+	
+	\item Since the limit at $x=0$ does not even exist, there is nothing we can do here.
+	\item $F(x)=0$
+	\item The limit at every rational $x$ is zero as proven earlier in the book. So $f$ is discontinuous everywhere. The answer is no.
+	}
+\end{problem}
+
+\begin{problem}
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item Suppose $|f(x)|\leq|x|$, if we let $x=0$ then $|f(0)|\leq0$ and by noting that the absolute value has the property $|f(0)|\geq 0$ we must in fact have $f(0)=0$. Now let $\delta=\varepsilon$ then for every $\epsilon>0$ and any $x$, if $$|x-0|<\delta$$ then $$|f(x)|\leq|x|<\varepsilon$$ which is the same as $$|f(x)-f(0)|<\varepsilon.$$ Thus $f(x)$ is continuous at 0.
+	
+	\item $f:\emptyset \to \emptyset$
+	\item By letting $x=0$ we find that by using similar arguments to a) that $f(0)=0$. For every $\varepsilon>0$ there exists a $\delta>0$ such that for every $x$ if $$|x-a|<\delta$$ then, $$|g(x)|<\varepsilon$$ and then we certainly have $|f(x)|<\varepsilon$ and consequently $$|f(x)-f(0)|<\varepsilon,$$ so $f$ is continuous at zero.
+	}
+\end{problem}
+
+\begin{problem}
+	Let
+	\[f(x)=
+	\begin{cases}
+		1, &\text{x irrational} \\
+		-1, & \text{x rational.} 
+	\end{cases}
+	\]
+	The limit of $f(x)$ does not exist, but the function $|f(x)|$ is a constant function, thus it is continuous.
+\end{problem}
+
+\begin{problem}
+	\[g(x)=
+	\begin{cases}
+		0, &\text{x irrational}\\
+		x, &\text{otherwise}
+	\end{cases}
+	\]
+	The function $g(x)$ is continuous at precisely one point, that is 0. Now we just let the function $f$ we are looking for to be $f(x)=g(x-a)$.
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item \[f(x)=
+	\begin{cases}
+		\frac{1}{k}, &\frac{1}{k+1}<x<\frac{1}{k} \text{for k=1,2,\dots}\\
+		0, &\text{otherwise}
+	\end{cases}
+	\] ()Not confirmed)
+	\item  $$f(x)=\prod_{k=1}^{\infty}\frac{1}{x-\frac{1}{k}}.$$ Even though infinite polynomials have not been defined I conjecture that this implies the function is not continuous at $x=0$ because $k\to \infty$.
+	}
+\end{problem}

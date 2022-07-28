@@ -1,6 +1,6 @@
 \chapter{Limits}
 
-\begin{problem}
+\begin{problem} % 1
 	\enum{
 	\item Let $f(x)=x^2-1$ and $g(x)=\frac{1}{x+1}$, we get $\lim_{x\to 1}f(x)=0$ and $\lim_{x\to1}g(x)=\frac{1}{2}$. Then we get $$\lim_{x\to 1}(f\cdot g)(x)=0.$$
 	
@@ -21,5 +21,78 @@
 		\lim_{h\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}&=\lim_{h\to 0}\frac{h}{h(\sqrt{a+h}+\sqrt{a})} \\
 		\lim_{h\to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}&=\frac{1}{2\sqrt{a}}
 	\end{align*}
+	}
+\end{problem}
+
+\begin{problem} % 2
+	\enum{
+	\item Note that $1-x=(1-\sqrt{x})(1+\sqrt{x})$. Then, the limit is 
+	\begin{align*}
+		\lim_{x\to 1}\frac{1}{1+\sqrt{x}}=\frac{1}{2}	
+	\end{align*}
+
+	\item Expand the fraction by $1+\sqrt{1-x^2}$. This makes 
+	\begin{gather*}
+		\lim_{x \to 0}\frac{x^2}{x(1+\sqrt{1-x^2})}=\lim_{x \to 0}\frac{x}{1+\sqrt{1-x^2}}=0
+	\end{gather*}
+
+	\item Expand this in the same way:
+	\begin{gather*}
+		\lim_{x \to 0}\frac{x^2}{x^2(1+\sqrt{1-x^2})}=\lim_{x \to 0}\frac{1}{1+\sqrt{1-x^2}}=\frac{1}{2}
+	\end{gather*}
+	}
+\end{problem}
+
+\begin{problem} % 3
+	\enum{
+		\item Note that $$|x^4-a^4|=|x-a|\cdot|x^3+ax^2+a^2x+a^3| < \varepsilon$$
+		So we let $$\delta =\frac{\varepsilon}{|x^3+ax^2+a^2x+a^3|}$$
+	
+		\item We start by plugging in $f(x)$ and $l$,
+		\begin{gather*}
+			\left|\frac{1}{x}-1\right|<\varepsilon \\
+			\iff |x-1|<|x|\varepsilon
+		\end{gather*}
+		Thus we let $\delta=|x|\varepsilon$
+		
+		\item This is closely related to (i) and (ii). Taking a close look at the proof of part one of theorem 2 indicates that we have $\delta=min(\delta_1, \delta_2)$. So we find $\delta_1,\delta_2$ for $x^4$ and $\frac{1}{x}$ respectively. Let $$\delta_1=\frac{\varepsilon}{2|x^3+ax^2+a^2x+a^3|}$$ and $$\delta_2=\frac{|x|\varepsilon}{2}.$$
+		Then $0<|x-1|<\delta$ implies $|x^4-1|<\frac{\varepsilon}{2}$ and $|\frac{1}{x}-1|<\frac{\varepsilon}{2}$, and consequently $$\left|\left (x^4+\frac{1}{x}\right )-2\right |\leq\left |x^4-1\right |+\left |\frac{1}{x}-1\right |<\varepsilon$$
+		
+		\item This is similar to the above problem except it follows part two of theorem 2.
+		\item $\delta=\varepsilon^2$
+		\item $\delta=(\sqrt{x}+1)\varepsilon$
+	}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+	\enuma{
+	\item Consider $f(x)=\frac{1}{x-a}$ and $g(x)=\frac{-1}{x-a}$, then $\lim_{x\to a}[f(x)+g(x)]=0$
+	\item Consider $$\lim_{x \to a}[f(x)+g(x)]-\lim_{x \to a}f(x)=\lim_{x \to a}g(x)$$
+	\item Suppose for contradiction that $\lim_{x \to a}[f(x)+g(x)]$ exists. Since $\lim_{x \to a}f(x)$ exists by the hypothesis and using (b) we get a contradiction that $\lim_{x \to a}g(x)$ exists and does not exist. Thus $\lim_{x \to a}[f(x)+g(x)]$ does not exist.
+	\item Let $f(x)=0$ and $g(x)=\frac{1}{x-a}$ then $\lim_{x \to a}f(x)g(x) = 0$ but $\lim_{x \to a}g(x)$ does not exist.
+	}
+\end{problem}
+
+\begin{problem}
+	There is a $\delta > 0$ such that for every $\varepsilon >0$, if for any $x$, $0<|x-a| <\delta$ then $|f(x)-l|< \varepsilon$. Now let $x=a+h$ then we equivalently have if $0<|h|<\delta$ then, $|f(a+h)-l|<\varepsilon$ so to conclude we have $\lim_{x \to a}f(x)=\lim_{h\to 0}f(a+h)$.
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+\end{problem}
+\begin{problem}
+	\enuma{
+	\item Suppose $f(x)\leq g(x)$ for every $x$ and that $\lim\limits_{x \to a}f(x)$ and $\lim\limits_{x \to a}g(x)$ exist. This means there exists a $\delta>0$ so that for every $\frac{\varepsilon}{2}>0$ and every $x$, if $0<|x-a|<\delta$ then $|f(x)-l|<\frac{\varepsilon}{2}$ and $|g(x)-m|<\frac{\varepsilon}{2}$. Consequently we have $$f(x)-l>-\frac{\varepsilon}{2}$$ and $$g(x)-m<\frac{\varepsilon}{2}.$$
+	Now we also have that $$l-\frac{\varepsilon}{2}<f(x)\leq g(x)<m+\frac{\varepsilon}{2}$$
+	$$l-m<\varepsilon\iff l\leq m$$
+	\item ?
+	\item We would have $$l-\frac{\varepsilon}{2}<f(x)<g(x)<m+\frac{\varepsilon}{2}$$ which still implies $$l\leq m$$ so not necessarily.
 	}
 \end{problem}
