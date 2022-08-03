@@ -61,3 +61,71 @@
 	\item  $$f(x)=\prod_{k=1}^{\infty}\frac{1}{x-\frac{1}{k}}.$$ Even though infinite polynomials have not been defined I conjecture that this implies the function is not continuous at $x=0$ because $k\to \infty$.
 	}
 \end{problem}
+
+\begin{problem}
+	Let $y=0$, then it follows that $f(0)=0$. Let $y=-x$ then we obtain $f(-x)=-f(x)$. There exists an $\delta>0$ such that if $|t|<\delta$ then $|f(t)|<\varepsilon$. Let $t=x-a$, this is the same as the following:\\
+	For every $x$ if $|x-a|<\delta$ then $$|f(x)+f(-a)|<\varepsilon\iff |f(x)-f(a)|<\varepsilon$$ which is the same as stating that $f$ is continuous everywhere.
+\end{problem}
+
+\begin{problem}
+	By theorem 1 it is the case that $f+\alpha$ is continuous at $a$ and $(f+\alpha)(a)=\alpha\neq0$. For every $\varepsilon>0$ there exists a $\delta>0$ so that for every $x$ satisfying $|x-a|<\delta$ it follows that $$|f(x)-f(a)|<\varepsilon,$$ which is the same as
+	$$|\alpha|>|f(x)+\alpha+(-\alpha)|\leq|f(x)+\alpha|+|\alpha|$$
+	$$|f(x)+\alpha|<0$$
+	This last inequality implies $f+\alpha$ is non zero. We conclude the proof by noting that $|x-a|<\delta$ is the same as $x-\delta<a<x+\delta$
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item This is proven directly by stating the logical negation of the epsilon-delta continuity definition.
+	\item Deconstructing $|f(x)-f(a)|>\varepsilon$ yields $f(x)>f(a)+\varepsilon$ or $f(a)-\varepsilon>f(x)$
+	}
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item For every $\varepsilon>0$ there exists an $\delta>0$ such that for every $x$ satisfying $|x-a|<\delta$ it follows that $|f(x)-f(a)|<\varepsilon$.
+	Using one of the standard triangle inequalities it follows directly that
+	$||f(x)|-|f(a)||\leq<|f(x)-f(a)|<\varepsilon$.
+	\item We have $f(x)=E(x)+O(x)$ and $f(-x)=E(x)-O(x)$, thus $O(x)=\frac{f(x)-f(-x)}{2}$ which is continuous by theorem 1. We also have $E(x)=\frac{f(-x)+f(x)}{2}$ of which is also continuous by theorem 1.
+	\item Recalling the formula for $\max(x,y)$ and $\min(x,y)$ on exercise 13 (Chapter 1) and using theorem 1-2 proves the statement
+	\item Define 
+	\[g(x)=
+	\begin{cases}
+		f(x), &f(x)>0\\
+		0, &f(x)\leq0
+	\end{cases}
+	\]
+	\[
+	h(x)=
+	\begin{cases}
+		-f(x), &f(x)\leq 0\\
+		0, &f(x)>0
+	\end{cases}
+	\]
+	Testing the cases $f(x)>0$ and $f(x)\leq 0$ will show that $f(x)=g-h$ for every $x$. It is also easy to see that $g,h$ are continuous and non-negative.
+	}
+\end{problem}
+
+\begin{problem}
+	Consider the function $f(x)=\frac{1}{x}$, it is continuous at every $a\neq0$. Suppose $g$ is continuous at any $g(a)\neq0$. It follows directly from theorem 2 that $\frac{1}{g}$ is continuous at any $a$ so long $g(a)\neq0$.
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item Consider the function $G(x)=g(x)$ for $x\neq a$, and $G(a)=l$. $G$ is then continuous at $a$, so $$\lim_{x\to a}G(x)=G(a)=l.$$
+	It is then the case that $f$ is continuous at $l=G(a)$, using theorem 2 we know that $f\circ G$ must be continuous at $a$, that is $$\lim_{x \to a}f(G(x))=f(G(a)).$$ 
+	Notice that in the limit, $G(x)=g(x)$ because $x\neq a$. This means that we have $$\lim_{x \to a}f(g(x))=f(l).$$
+	\item Suppose $f(x)=0$ for $x\neq l$, and $f(l)=1$. Also suppose $g(x)\neq l$ for $x\neq a$. Then $\lim_{x \to a}f(g(x))=f(\lim_{x \to a}g(x))$ implies $0=1$ which is obviously a contradiction.
+	}
+\end{problem}
+
+\begin{problem}
+	Let 
+	\[g(x)=
+	\begin{cases}
+		f(x), a\leq x\leq b \\
+		f(a), x< a \\
+		f(b), x> b
+	\end{cases}
+	\]
+\end{problem}
