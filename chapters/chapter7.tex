@@ -1,0 +1,98 @@
+\chapter{Three Hard Theorems}
+
+\begin{problem}
+	\enum{
+	\item Bounded below and above. $f$ takes on the minimum at $x=0$
+	\item Bounded below and above. $f$ does not take on maximum or minimum
+	\item Function takes on the minimum value at $x=0$ and only bounded below
+	\item Same as (iii)
+	\item If $a\leq -1$ then the set $[-a-1, a+1]$ is the empty set and thus it is not bounded.
+	If $a> -1$ then since $x^2$ and $a+2$ is bounded below, $f$ must be bounded below. We also have that $f$ takes on the minimum value of $0$ at $x=0$. The function is also certainly bounded above because of the interval. Whether $f$ takes on the maximum value depends on if $a+2\geq x^2$ when $x$ is maximum, thus 
+	\begin{align*}
+		a+2&\geq a^2+2a+1 \\
+		0 &\geq a^2+a-1 \\
+		\frac{-1-\sqrt{5}}{2}&\leq a \leq \frac{-1-\sqrt{5}}{2}
+	\end{align*}
+
+	But we must also remember $a>-1$, thus $-1<a\leq \frac{-1-\sqrt{5}}{2}$
+	means that  $f$ takes on the maximum value. \\
+	
+	If $\frac{-1-\sqrt{5}}{2} < a$ then $f$ does not take on the maximum value.
+	
+	\item The main difference from (v) is the fact that $x^2$ may now take on the maximum value\textemdash which was the only reason $f$ did not take on the maximum value. The conclusion is therefore, if $a< -1$ then $f$ is not bounded and does not take on any values.
+	If $a\geq-1$ then $f$ is bounded and takes on the maximum and maximum value.
+	
+	\item $f$ is bounded below $0$ and is bounded above $1$. The function takes on the minimum value when $x$ is irrational and takes on the maximum value when $q=1$, that is only when $x=1,0$.
+	
+	\item $f$ is bounded below and above. $f$ does not take on a minimum value, but takes on the maximum when $x$ is irrational or $x=1,0$.
+	
+	\item $f$ is bounded and takes on a maximum value of $1$ and minimum value of $-1$
+	
+	\item If $a<1$ then $f$ does not take on any values and consequently is not bounded. Suppose otherwise, then clearly $f$ is bounded below and takes on the minimum of $0$. If $a$ is rational, then the maximum is $a$. If $a$ is irrational then $f$ does not take on the maximum value.
+	
+	\item If $0>a$ then the function does not take on any values and thus the function is neither bounded above or below. If $a=0$ then the function contains a single point of which is the maximum and minimum value. \\
+	
+	If $a>0$ then $f$ is continuous and it takes on the minimum value and maximum value by theorem 3 and 7. Consequently this means $f$ is bounded above and below.
+	
+	\item Same thing here as in (xi)
+	}
+\end{problem}
+
+\begin{problem}
+	\enum{
+	\item Let $n=-2$ then $f(n)=-3$ and $f(n+1)=3$
+	\item Let $n=-5$ then $f(n)=-9$ and $f(n+1)=249$
+	\item Let $n=-1$
+	\item Let $n=0$
+	}
+\end{problem}
+
+\begin{problem}
+	\enum{
+	\item Let $f(x)=x^{179}+\frac{163}{1+x^2+\sin^2{x}}$. Setting $x=0$ makes $f(0)=163$. Using a calculator we find that $f(1) \approx 61.2$. Since $f$ is continuous on this interval we may use theorem 5 to conclude that there exists an $x$ such that $f(x)=119$
+	\item Let $f(x)=\sin{x}-x$ we then find $a,b$ such that $f(a)<-1<f(b)$.
+	Let $b=0$ then $f(b)=0$
+	Let $a=\pi$ then $f(a)=-\pi$. There is therefore an $x$ such that $\sin{x}-x=-1$.
+	}
+\end{problem}
+
+\begin{problem}
+	\enum{
+	\item We have $n\geq k$.
+	Let $a_1,\ldots,a_k$ be distinct real numbers.
+	Let $$f(x)=\prod_{p=1}^{k}(x-a_p)\prod_{q=1}^{n-k}(x+ i(-1)^q)$$
+	Then the polynomial has degree $k+n-k=n$ and $k$ real roots and $n-k$ complex roots which are not counted as a real root.
+	\item Let $f(x)=h(x)g(x)$ such that $g(x)$ does not have any roots and $h(x)$ has all the roots. Then $h$ is of degree $k$ and $g$ is of degree $n-k$. \\\\
+	Suppose for contradiction that $n-k$ is odd, then by theorem 9 $g$ must have a root which is a contradiction. Thus $n-k$ is even.
+}
+\end{problem}
+
+\begin{problem}
+	The function must be constant because between any two rationals there exists a real number and for the function to reach more than one rational it would have to discontinuous.
+\end{problem}
+
+\begin{problem}
+	$$x^2+(f(x))^2=1 \iff (f(x))^2=1-x^2 \iff f(x)=\pm \sqrt{1-x^2}$$
+	Either case works because $(-f(x))^2=(f(x))^2$.
+\end{problem}
+
+\begin{problem}
+	$$(f)^2=x^2\iff (f-x)(f+x)=0 \iff f=x \text{ or } f=-x$$
+	Therefore, two functions.
+\end{problem}
+
+\begin{problem}
+	$$f^2=g^2 \iff (f-g)(f+g)=0 \iff f=g \text{ or } f=-g$$
+\end{problem}
+
+\begin{problem}
+	\enuma{
+	\item The function has a minimum at $x=a$ because $f(x)\neq0$ for every $x\neq a$
+	\item If $x>a$ then $f(x)>0$ for all $x$. If $x<a$ then $f(x)<0$ for all $x$.
+	\item Consider the function $f(x)=x^4-y^4=0$, all the the roots are $x=\pm y$. Since $$x^4-y^4=(x-y)(x^3+x^2y+xy^2+y^3)$$ we can divide by $x-y$ to remove the $x=y$ root and thus the function $$g(x)=x^3+x^2y+xy^2+y^3$$ has one unique root at $x=-y$. Consequently if $x>-y$ then $g(x)>0$ and if $x<-y$ then $g(x)<0$
+	}
+\end{problem}
+
+\begin{problem}
+	Let $h(x)=f(x)-g(x)$ then $h(a)<0<h(b)$, by theorem 1 there is an $x$ such that $h(x)=0$, and consequently $f(x)=g(x)$.
+\end{problem}
